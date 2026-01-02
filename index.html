@@ -1,148 +1,162 @@
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Консультация по YouTube</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Камински PRO — разбор YouTube-видео</title>
 
   <!-- Telegram WebApp -->
   <script src="https://telegram.org/js/telegram-web-app.js"></script>
 
   <style>
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
       min-height: 100vh;
       background: radial-gradient(1200px 600px at 50% -200px, #1f2937, #0b0f14);
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, sans-serif;
-      color: #ffffff;
+      color: #fff;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 20px;
+      padding: 24px;
     }
 
     .card {
-      width: 100%;
       max-width: 420px;
-      background: linear-gradient(180deg, #111827, #0b0f14);
+      width: 100%;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
       border-radius: 20px;
       padding: 28px;
-      box-shadow:
-        0 20px 60px rgba(0, 0, 0, 0.6),
-        inset 0 1px 0 rgba(255, 255, 255, 0.04);
+      text-align: center;
+      backdrop-filter: blur(10px);
     }
 
-    .badge {
-      display: inline-block;
-      padding: 6px 12px;
-      border-radius: 999px;
-      background: rgba(99, 102, 241, 0.15);
-      color: #a5b4fc;
-      font-size: 12px;
-      font-weight: 500;
-      margin-bottom: 16px;
+    .author {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      margin-bottom: 22px;
+    }
+
+    .author img {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid rgba(255,255,255,0.2);
+    }
+
+    .author-name {
+      text-align: left;
+      line-height: 1.2;
+    }
+
+    .author-name strong {
+      display: block;
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .author-name span {
+      font-size: 13px;
+      opacity: 0.7;
     }
 
     h1 {
-      font-size: 22px;
-      line-height: 1.3;
-      margin: 0 0 12px 0;
+      font-size: 24px;
+      line-height: 1.25;
+      margin: 0 0 14px;
     }
 
-    p {
+    .sub {
       font-size: 15px;
-      line-height: 1.6;
-      color: #cbd5f5;
-      margin: 0 0 24px 0;
+      opacity: 0.85;
+      margin-bottom: 22px;
     }
 
     ul {
-      list-style: none;
-      padding: 0;
-      margin: 0 0 28px 0;
-    }
-
-    ul li {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
+      text-align: left;
+      margin: 0 0 24px;
+      padding-left: 18px;
       font-size: 14px;
-      line-height: 1.5;
-      color: #e5e7eb;
-      margin-bottom: 12px;
+      opacity: 0.9;
     }
 
-    ul li::before {
-      content: "✔";
-      color: #22c55e;
-      font-weight: 700;
-      margin-top: 1px;
+    li {
+      margin-bottom: 8px;
     }
 
-    button {
+    .btn {
+      display: block;
       width: 100%;
-      border: none;
-      border-radius: 14px;
-      padding: 16px;
-      font-size: 16px;
+      background: #22d3ee;
+      color: #000;
       font-weight: 600;
-      cursor: pointer;
-      background: linear-gradient(135deg, #6366f1, #8b5cf6);
-      color: #ffffff;
-      transition: transform 0.15s ease, box-shadow 0.15s ease;
-      box-shadow: 0 10px 30px rgba(99, 102, 241, 0.35);
+      text-decoration: none;
+      padding: 16px;
+      border-radius: 14px;
+      font-size: 16px;
     }
 
-    button:active {
-      transform: translateY(1px);
-      box-shadow: 0 6px 18px rgba(99, 102, 241, 0.35);
-    }
-
-    .footer {
-      margin-top: 18px;
-      text-align: center;
-      font-size: 12px;
-      color: #9ca3af;
+    .note {
+      margin-top: 14px;
+      font-size: 13px;
+      opacity: 0.6;
     }
   </style>
 </head>
+
 <body>
-
   <div class="card">
-    <div class="badge">Персональный разбор</div>
 
-    <h1>Консультация по YouTube за 30 минут</h1>
+    <!-- ИДЕНТИФИКАЦИЯ -->
+    <div class="author">
+      <!-- 🔴 СЮДА МОЖНО ВСТАВИТЬ ЭТУ ФОТКУ (загрузи в репозиторий и укажи путь) -->
+      <img src="avatar.jpg" alt="Камински PRO">
+      <div class="author-name">
+        <strong>Даниил Каминский</strong>
+        <span>YouTube: «Камински PRO»</span>
+      </div>
+    </div>
 
-    <p>
-      Разберём твой канал и видео без воды и мотивационных речей.
-      Только конкретика и понятные шаги.
-    </p>
+    <!-- ХУК -->
+    <h1>Я разберу твоё видео<br>и покажу, где ты теряешь рост</h1>
 
+    <div class="sub">
+      Это не мотивация и не курс.<br>
+      Это персональный разбор твоего видео.
+    </div>
+
+    <!-- БОЛИ -->
     <ul>
-      <li>Почему видео не досматривают</li>
-      <li>Что исправить в подаче и монтаже</li>
-      <li>Как выйти на рост без выгорания</li>
+      <li>Ты уже снимаешь и выкладываешь видео</li>
+      <li>Просмотры стоят или скачут без логики</li>
+      <li>Понимаешь, что проблема есть — но не видишь где</li>
+      <li>Снимаешь сам, без команды и продакшена</li>
     </ul>
 
-    <button id="startBtn">Начать в Telegram</button>
+    <!-- CTA -->
+    <a class="btn" href="#" onclick="sendToBot()">Отправить видео на разбор</a>
 
-    <div class="footer">
-      После нажатия откроется диалог в Telegram
+    <div class="note">
+      30 минут · без воды · конкретные правки
     </div>
   </div>
 
   <script>
     const tg = window.Telegram.WebApp;
-    tg.ready();
+    tg.expand();
 
-    document.getElementById("startBtn").addEventListener("click", () => {
-      tg.openTelegramLink("https://t.me/help4usbot?start=consult");
-    });
+    function sendToBot() {
+      tg.sendData(JSON.stringify({
+        action: "start_review"
+      }));
+    }
   </script>
-
 </body>
 </html>
